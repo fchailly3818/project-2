@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ ActivityDiary
+  ~
+  ~ Copyright (C) 2023 Raphael Mack http://www.raphael-mack.de
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/add8"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="240dp">
+
+        <Button
+            android:id="@+id/time_start"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="200dp"
+            android:layout_weight="4"
+
+            android:gravity="center_vertical|center_horizontal"
+            android:contentDescription="@string/desc_start_time"
+            android:onClick="showStartPickerDialog"
+            android:text="提示开始活动"
+            android:textColor="#FFB6C1"
+            android:textSize="20sp"
+            android:typeface="normal"
+            android:background="@drawable/alarm"/>
+
+            <Button
+                android:id="@+id/time_end"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:background="@drawable/alarm1"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@string/desc_end_time"
+                android:gravity="center_vertical|center_horizontal"
+                android:onClick="showEndPickerDialog"
+                android:text="定时结束活动"
+                android:textColor="#98FB98"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
